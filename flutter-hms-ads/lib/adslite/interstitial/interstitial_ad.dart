@@ -64,8 +64,8 @@ class InterstitialAd {
     });
   }
 
-  Future<bool?> loadAd() {
-    _initAd();
+  Future<bool?> loadAd() async {
+    await _initAd();
     _startListening();
     _startListeningReward();
     return Ads.instance.channelInterstitial

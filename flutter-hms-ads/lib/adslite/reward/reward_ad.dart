@@ -88,8 +88,8 @@ class RewardAd {
     });
   }
 
-  Future<bool?> loadAd({required String adSlotId, required AdParam adParam}) {
-    _initAd();
+  Future<bool?> loadAd({required String adSlotId, required AdParam adParam}) async {
+    await _initAd();
     _startListening();
     return Ads.instance.channelReward
         .invokeMethod("loadRewardAd", <String, dynamic>{

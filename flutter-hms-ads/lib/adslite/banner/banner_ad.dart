@@ -62,7 +62,7 @@ class BannerAd {
   }
 
   Future<bool?> loadAd() async {
-    _initAd();
+    await _initAd();
     _startListening();
     return Ads.instance.channelBanner
         .invokeMethod("loadBannerAd", <String, dynamic>{

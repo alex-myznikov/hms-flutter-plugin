@@ -171,7 +171,7 @@ public class AccAuthService implements MethodChannel.MethodCallHandler, PluginRe
 
         final MethodChannel.Result result = pair.first;
 
-        if (result != null) {
+        if (result != null && data != null) {
             AccountAuthManager.parseAuthResultFromIntent(data)
                     .addOnSuccessListener(authAccount -> ResultSender.success(activity, "signIn", result, AccountBuilder.authAccountToMap(authAccount, activity.getApplicationContext())))
                     .addOnFailureListener(e -> ResultSender.exception(activity, TAG, e, "signIn", result));

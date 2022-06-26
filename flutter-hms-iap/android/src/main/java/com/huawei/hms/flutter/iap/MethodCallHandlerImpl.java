@@ -316,7 +316,7 @@ public class MethodCallHandlerImpl implements MethodCallHandler, ActivityResultL
         final Result result = pair.first;
         final int requestType = pair.second;
 
-        if (result != null) {
+        if (result != null && data != null) {
             if (resultCode == Activity.RESULT_OK) {
                 switch (requestType) {
                     case REQUEST_CREATE_PURCHASE_INTENT:

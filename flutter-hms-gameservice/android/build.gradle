@@ -3,7 +3,7 @@ version '1.0'
 
 buildscript {
     repositories {
-        maven { url 'http://developer.huawei.com/repo/' }
+        maven { url 'https://developer.huawei.com/repo/' }
         google()
         jcenter()
     }
@@ -15,7 +15,7 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
-        maven { url 'http://developer.huawei.com/repo/' }
+        maven { url 'https://developer.huawei.com/repo/' }
         google()
         jcenter()
     }
